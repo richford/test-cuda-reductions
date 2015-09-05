@@ -1,0 +1,4 @@
+date;
+cp test-reduction.c test-reduction.cu
+nvcc -c -arch=sm_35 --use_fast_math -O3 -I./ test-reduction.cu
+nvcc -o testreduce test-reduction.o -lcudart -lm
